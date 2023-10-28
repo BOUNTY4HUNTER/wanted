@@ -19,12 +19,15 @@ const config: Config = {
             },
             colors: {
                 primary: {
-                    DEFAULT: '#E6E3DF',
-                    1: '#FFF8EF',
-                    2: '#E4D7C6',
-                    3: '#A89879',
-                    4: '#ED1F13',
+                    1: '#E6E3DF',
+                    2: '#FFF8EF',
+                    3: '#E4D7C6',
+                    4: '#A89879',
+                    5: '#2D1F13',
                 },
+                font:{
+                    title: "#2D1F13"
+                }
             },
             screens: {
                 mobile: '320px',

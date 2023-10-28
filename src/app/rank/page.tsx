@@ -1,9 +1,14 @@
 import React from 'react';
+import Item from '@/components/item';
 
 export default function Rank() {
     return (
-        <section className="mx-auto flex h-screen w-1/4 flex-col items-center justify-center ">
-            랭킹 페이지 입니다.
-        </section>
+        <div className="flex flex-col items-center bg-primary-1 py-2 gap-y-2">
+            {Array(10)
+                .fill(0)
+                .map((_, idx) => {
+                    return <Item index={idx + 1} />;
+                })}
+        </div>
     );
 }

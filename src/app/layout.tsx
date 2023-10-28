@@ -5,7 +5,7 @@ import Footer from '@/components/common/Footer';
 import localFont from 'next/font/local';
 
 export const metadata: Metadata = {
-    title: 'Wnated',
+    title: 'Wanted',
     description: 'Wanted',
 };
 
@@ -22,9 +22,12 @@ export default function RootLayout({
     return (
         <html lang="ko">
             <body className={pretendard.className}>
-                <Header />
-                {children}
-                <Footer />
+                <div className="hidden md:flex">모바일로 접속해주세요</div>
+                <div className="flex flex-col md:hidden h-screen max-h-screen">
+                    <Header />
+                    {children}
+                    <Footer />
+                </div>
             </body>
         </html>
     );
