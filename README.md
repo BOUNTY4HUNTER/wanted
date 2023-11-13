@@ -27,7 +27,7 @@ body
 footer
 ```
 
-### 2. Commit Type
+### 2. Commit TypeButton
 
 - feat : 새로운 기능 추가
 - fix : 버그 수정
