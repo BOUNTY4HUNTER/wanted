@@ -41,44 +41,46 @@ function RecentItemList() {
             </h2>
             <div className="w-screen overflow-x-scroll">
                 <div className="flex w-max bg-primary-4 h-44 relative">
-                    {items.map((v) => (
-                        <div
-                            className="relative w-32 overflow-hidden h-full"
-                            key={v.id}
-                        >
-                            {/* TODO: API 연결 후 이미지 위치가 이상하면 transform 수정하세요*/}
-                            <Image
-                                alt="마우스"
-                                className="m-2"
-                                src={v.thumbnailURL}
-                                width={300}
-                                height={300}
-                                style={{
-                                    height: 'fit-content',
-                                    width: '60%',
-                                    objectFit: 'contain',
-                                    zIndex: 1,
-                                    position: 'absolute',
-                                    top: '50%',
-                                    left: '50%',
-                                    transform: 'translate(-45%, -65%)',
-                                }}
-                            />
-                            <Image
-                                src={ItemBackground}
-                                alt="bg"
-                                style={{
-                                    position: 'absolute',
-                                    height: 'fit-content',
-                                    width: '100%',
-                                    top: '50%',
-                                    left: '50%',
-                                    transform: 'translate(-40%, -45%)',
-                                    zIndex: 0,
-                                }}
-                            />
-                        </div>
-                    ))}
+                    {items.map((v) => {
+                        console.log(v);
+                        return (
+                            <div
+                                className="relative w-32 overflow-hidden h-full"
+                                key={v.id}
+                            >
+                                {/*<Image*/}
+                                {/*    alt="마우스"*/}
+                                {/*    className="m-2"*/}
+                                {/*    src={v.thumbnailURL}*/}
+                                {/*    width={300}*/}
+                                {/*    height={300}*/}
+                                {/*    style={{*/}
+                                {/*        height: 'fit-content',*/}
+                                {/*        width: '60%',*/}
+                                {/*        objectFit: 'contain',*/}
+                                {/*        zIndex: 1,*/}
+                                {/*        position: 'absolute',*/}
+                                {/*        top: '50%',*/}
+                                {/*        left: '50%',*/}
+                                {/*        transform: 'translate(-45%, -65%)',*/}
+                                {/*    }}*/}
+                                {/*/>*/}
+                                <Image
+                                    src={ItemBackground}
+                                    alt="bg"
+                                    style={{
+                                        position: 'absolute',
+                                        height: 'fit-content',
+                                        width: '100%',
+                                        top: '50%',
+                                        left: '50%',
+                                        transform: 'translate(-40%, -45%)',
+                                        zIndex: 0,
+                                    }}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

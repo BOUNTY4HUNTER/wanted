@@ -32,7 +32,9 @@ export default async function fetchLostPost({ title, content, reward }: Args) {
                 reward: Number(reward),
             },
         });
+        console.log(data);
     }
+    console.log(data);
 
     return data;
 }
