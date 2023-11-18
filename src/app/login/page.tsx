@@ -30,14 +30,14 @@ export default function Login() {
             </div>
             <div className="mx-auto justify-center flex flex-col w-5/6">
                 <input
-                    className="flex border border-solid border-black rounded-lg p-2 h-9 mb-3"
+                    className="flex border border-solid border-black rounded-lg p-2 h-9 mb-3 z-10"
                     type="text"
                     placeholder="아이디를 입력해 주세요"
                     value={username}
                     onChange={handleUsernameChange}
                 />
                 <input
-                    className="flex border border-solid border-black rounded-lg p-2 h-9 mb-8"
+                    className="flex border border-solid border-black rounded-lg p-2 h-9 mb-8 z-10"
                     type="password"
                     placeholder="비밀번호를 입력해 주세요"
                     value={password}
