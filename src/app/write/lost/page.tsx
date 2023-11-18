@@ -37,7 +37,7 @@ export default function Write() {
     };
 
     return (
-        <section className="flex flex-col px-2 pt-6 flex-1 z-20">
+        <section className="flex flex-col pt-6 flex-1 bg-primary-3">
             <div className="bg-primary-3 py-8 gap-y-6 z-20 flex flex-col flex-1 px-6">
                 <TypeButton />
                 <div className="gap-y-2 ">

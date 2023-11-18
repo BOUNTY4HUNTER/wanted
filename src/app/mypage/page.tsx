@@ -5,7 +5,7 @@ import MyPageButton from '$/images/mypage.png';
 
 export default function Mypage() {
     return (
-        <div className="flex flex-col flex-1 h-full bg-primary-1">
+        <div className="flex flex-col flex-1 h-full bg-primary-1 pt-12">
             <section className="flex flex-col bg-primary-4 m-4 p-4">
                 <div className="flex">
                     <Image
@@ -39,7 +39,7 @@ export default function Mypage() {
                 </div>
             </section>
             <hr />
-            <section className="flex justify-around">
+            <section className="flex justify-around pt-5">
                 <div>
                     <Image
                         src={MyPageButton}
