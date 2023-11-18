@@ -1,10 +1,13 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
+import fetchLogIn from '@/lib/helper/fetchLogIn';
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const router = useRouter();
 
     const handleUsernameChange = (event: ChangeEvent<HTMLInputElement>) => {
         setUsername(event.target.value);
@@ -14,10 +17,10 @@ export default function Login() {
         setPassword(event.target.value);
     };
 
-    const handleLogin = () => {
-        // Perform login logic with username and password
-        console.log('Username:', username);
-        console.log('Password:', password);
+    const handleLogin = async () => {
+        const data = await fetchLogIn({ username, password });
+        console.log(data);
+        router.push('/');
     };
 
     return (

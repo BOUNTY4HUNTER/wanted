@@ -1,5 +1,5 @@
 import { fetcher } from '@/lib/utils/api';
-import { Item, ListType } from '@/types/main';
+import { Item } from '@/types/main';
 import { API_BASE_URL } from '@/lib/constants/url';
 import { range } from '@/lib/utils/array';
 
@@ -17,7 +17,8 @@ export default async function fetchRankItemList() {
         address: '주소입니다.',
     }));
 
-    if (process.env.NODE_ENV === 'production') {
+    //process.env.NODE_ENV === 'production'
+    if (process.env.NODE_ENV === 'development') {
         data = await fetcher<null, Item[]>(url);
     }
 

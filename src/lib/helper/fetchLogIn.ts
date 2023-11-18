@@ -2,9 +2,8 @@ import { API_BASE_URL } from '@/lib/constants/url';
 import { fetcher } from '@/lib/utils/api';
 
 type Args = {
-    title: string;
-    content: string;
-    reward: string;
+    username: string;
+    password: string;
 };
 
 type Res = {
@@ -12,13 +11,12 @@ type Res = {
 };
 
 type Req = {
-    title: string;
-    content: string;
-    reward: number;
+    username: string;
+    password: string;
 };
 
-export default async function fetchLostPost({ title, content, reward }: Args) {
-    const url = `${API_BASE_URL}/api/lost`;
+export default async function fetchLogIn({ username, password }: Args) {
+    const url = `${API_BASE_URL}/api/found`;
 
     let data = {
         result: 'success',
@@ -28,14 +26,11 @@ export default async function fetchLostPost({ title, content, reward }: Args) {
     if (process.env.NODE_ENV === 'development') {
         data = await fetcher<Req, Res>(url, {
             body: {
-                title,
-                content,
-                reward: Number(reward),
+                username,
+                password,
             },
         });
-        console.log(data);
     }
-    console.log(data);
 
     return data;
 }

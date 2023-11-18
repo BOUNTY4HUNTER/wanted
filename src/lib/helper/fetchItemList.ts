@@ -20,7 +20,8 @@ export default async function fetchItemsList(listType: ListType) {
         address: '주소입니다.',
     }));
 
-    if (process.env.NODE_ENV === 'production') {
+    // process.env.NODE_ENV === 'production'
+    if (process.env.NODE_ENV === 'development') {
         data = await fetcher<null, Item[]>(url);
     }
 

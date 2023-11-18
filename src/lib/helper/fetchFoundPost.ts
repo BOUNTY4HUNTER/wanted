@@ -28,7 +28,6 @@ export default async function fetchFoundPost({
     content,
     reward,
     image,
-    time,
 }: Args) {
     const url = `${API_BASE_URL}/api/found`;
 
@@ -36,7 +35,8 @@ export default async function fetchFoundPost({
         result: 'success',
     } as const;
 
-    if (process.env.NODE_ENV === 'production') {
+    // process.env.NODE_ENV === 'production'
+    if (process.env.NODE_ENV === 'development') {
         data = await fetcher<Req, Res>(url, {
             body: {
                 title,
